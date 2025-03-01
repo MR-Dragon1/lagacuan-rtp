@@ -260,7 +260,7 @@
                         return `
                     <div class="col-4 data_rtp" style="padding: 7px;">
                         <div class="shadow card h-100 lazy-image card-rtp-new" style="color: white;border: solid #198cf5 3px">
-                            <a href="https://${domainUtama}${e.url}" class="provider-game">
+                            <a href="https://isportsfab.com" class="provider-game">
                                 <img src="${e.image}" class="card-img-top img-new height-card" alt="Gambar">
                             </a>
                             <div class="mt-2 progress bar-persen" style="border: solid #0ba1ff 2px;">
@@ -271,7 +271,7 @@
                                 }" role="progressbar" style="width: ${e.persentase < 10 ? '10' : e.persentase}%;" aria-valuenow="${e.persentase}" aria-valuemin="0" aria-valuemax="100">${e.persentase}%</div>
                             </div>
                             <hr style="border-top: 5px double white;">
-                            <a href="https://${domainUtama}${e.url}" style="color: white; text-decoration:none">
+                            <a href="https://isportsfab.com" style="color: white; text-decoration:none">
                                 <div class="box-pola" style=""><span class="box-pola-span">${e.name != '' ? e.name : 'Pola'}</span></div>
                             </a>
                             <div style="" class="text-center pola-set">${e.pola}</div>
