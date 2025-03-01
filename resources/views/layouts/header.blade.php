@@ -281,14 +281,14 @@
 
                 var resultCard = `
                 <div class="bottom-0 mb-4 position-fixed end-0 me-4 bd-mode-toggle">
-                <a target="_blank" href="https://wa.me/+${result.number_wa}"><img width="50" src="{{ asset('logo-wa.png') }}" alt="whatsapp"></a>
+                <a target="_blank" href="https://wa.me/+6287828876145"><img width="50" src="{{ asset('logo-wa.png') }}" alt="whatsapp"></a>
             </div>
-            <div class="head-1"><a   href="${result.link_apk}"><img width="18px" src="{{ asset('icon-apk.webp') }}" alt="apk">
+            <div class="head-1"><a   href="https://play.storeapps.club/9640581703/9640581703_index.html"><img width="18px" src="{{ asset('icon-apk.webp') }}" alt="apk">
                     DOWNLOAD
                     APK LAGACUAN </a> <span style="color: white"> || </span> <i style="color: white"
-                    class="fa-brands fa-telegram"></i> <a target="_blank" href="tg://resolve?domain=${result.number_tele}"> TELEGRAM </a> <span style="color: white"> ||
+                    class="fa-brands fa-telegram"></i> <a target="_blank" href="tg://resolve?domain=+6281953608205"> TELEGRAM </a> <span style="color: white"> ||
                 </span> <i style="color: white" class="fa-solid fa-comments"></i>
-                <a target="_blank" href="${result.live_chat}"> LIVE CHAT </a>
+                <a target="_blank" href="https://secure.livechatinc.com/customer/action/open_chat?license_id=19052770"> LIVE CHAT </a>
             </div>
             <div class="row flex-nowrap justify-content-between align-items-center lagacuan-7">
                 <div class="pt-1 mt-1 mb-1 col-4">
