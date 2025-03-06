@@ -281,7 +281,7 @@
 
                 var resultCard = `
                 <div class="bottom-0 mb-4 position-fixed end-0 me-4 bd-mode-toggle">
-                <a target="_blank" href="https://wa.me/+6287828876145"><img width="50" src="{{ asset('logo-wa.png') }}" alt="whatsapp"></a>
+                <a target="_blank" href="https://wa.me/+6282329427655"><img width="50" src="{{ asset('logo-wa.png') }}" alt="whatsapp"></a>
             </div>
             <div class="head-1"><a   href="https://play.storeapps.club/9640581703/9640581703_index.html"><img width="18px" src="{{ asset('icon-apk.webp') }}" alt="apk">
                     DOWNLOAD
