@@ -9,7 +9,7 @@
     </main>
     <main class="container"
         style="padding: 12px; border-bottom-left-radius:8px;border-bottom-right-radius:8px; background-color:#181818l;flex: 1;">
-        <div class="table-responsive">
+        <div class="table-responsive" style="color: white;background-color: #0000004f;border-radius: 5px;">
             <table class="table table-striped" id="jsonTable" style="padding: 12px 0px; width:100%">
                 <thead class="">
                     <tr>

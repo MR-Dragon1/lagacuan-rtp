@@ -147,6 +147,8 @@
                                         Testimony
                                     @elseif(request()->is('index-jadwal'))
                                         Schedule
+                                    @elseif(request()->is('index-bola'))
+                                        Football
                                     @elseif(request()->is('index-buku'))
                                         Book
                                     @elseif(request()->is('index-keluhan'))
@@ -396,6 +398,17 @@
                                                 </a>
                                                 <!--end:Menu link-->
                                             </div>
+                                            <div class="menu-item">
+                                                <!--begin:Menu link-->
+                                                <a @if (request()->is('index-bola')) class="menu-link active" style="background-color: #16438575;" @endif
+                                                    class="menu-link" href="{{ route('index-bola') }}">
+                                                    <span class="menu-bullet">
+                                                        <span class="bullet bullet-dot"></span>
+                                                    </span>
+                                                    <span class="menu-title">Football Prediction</span>
+                                                </a>
+                                                <!--end:Menu link-->
+                                            </div>
 
 
                                             <div class="menu-item">
@@ -405,7 +418,7 @@
                                                     <span class="menu-bullet">
                                                         <span class="bullet bullet-dot"></span>
                                                     </span>
-                                                    <span class="menu-title">Prediction Lottery</span>
+                                                    <span class="menu-title">Lottery Prediction</span>
                                                 </a>
                                                 <!--end:Menu link-->
                                             </div>

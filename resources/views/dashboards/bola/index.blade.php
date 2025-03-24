@@ -26,13 +26,13 @@
                         <div class="card-header pt-7">
                             <!--begin::Title-->
                             <h3 class="card-title align-items-start flex-column">
-                                <span class="text-gray-800 card-label fw-bold">Schedule Lottery</span>
+                                <span class="text-gray-800 card-label fw-bold">Football Predictions</span>
                             </h3>
                             <!--end::Title-->
                             <!--begin::Actions-->
                             <button type="button" class="mt-1 mb-3 btn btn-success btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
-                                + Add Schedule
+                                + Add Predictions
                             </button>
                             <!--end::Actions-->
                         </div>
@@ -44,7 +44,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h4 class="modal-title" id="editModalLabel" style="text-transform: capitalize">
-                                            Create New Schedule</h4>
+                                            Create New Prediction</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -52,29 +52,45 @@
                                         @csrf
                                         <div class="modal-body">
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Choose Lottery :</label>
-                                                <select name="pasaran_id" id="pasaran_select" class="form-control">
-                                                    <option selected disabled>Select your lottery</option>
-                                                    @foreach ($pasarans as $pasaranId => $pasaranName)
-                                                        <option style="text-transform: uppercase"
-                                                            value="{{ $pasaranId }}">{{ $pasaranName }}</option>
-                                                    @endforeach
+                                                <label for="exampleInputEmail1" class="form-label">League :</label>
+                                                <select name="liga" id="pasaran_select" class="form-control">
+                                                    <option selected disabled>Select League</option>
+                                                    <option style="text-transform: uppercase" value="UEFA CHAMPIONS LEAGUE">
+                                                        UEFA CHAMPIONS LEAGUE</option>
+                                                    <option style="text-transform: uppercase" value="UEFA EUROPA LEAGUE">
+                                                        UEFA EUROPA LEAGUE</option>
+                                                    <option style="text-transform: uppercase"
+                                                        value="UEFA EUROPA CONFERENCE">UEFA EUROPA CONFERENCE</option>
+                                                    <option style="text-transform: uppercase"
+                                                        value="ENGLISH PREMIER LEAGUE">ENGLISH PREMIER LEAGUE</option>
+                                                    <option style="text-transform: uppercase" value="SPANISH LA LIGA">
+                                                        SPANISH LA LIGA</option>
+                                                    <option style="text-transform: uppercase" value="BUNDESLIGA">BUNDESLIGA
+                                                    </option>
+                                                    <option style="text-transform: uppercase" value="ITALIAN SERIE A">
+                                                        ITALIAN SERIE A</option>
+                                                    <option style="text-transform: uppercase" value="FRENCH LIGUE 1">FRENCH
+                                                        LIGUE 1</option>
+                                                    <option style="text-transform: uppercase" value="UNITED STATES MAJOR">
+                                                        UNITED STATES MAJOR</option>
+                                                    <option style="text-transform: uppercase" value="FA CUP">FA CUP</option>
+                                                    <option style="text-transform: uppercase" value="COPA DEL REY">COPA DEL
+                                                        REY</option>
                                                 </select>
                                             </div>
-
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Closing Schedule</label>
-                                                <input type="time" name="jadwal_tutup" class="form-control"
+                                                <label for="datetimeInput" class="form-label">Date and Time</label>
+                                                <input type="datetime-local" name="tanggal_waktu" class="form-control"
+                                                    id="datetimeInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Match</label>
+                                                <input type="text" name="pertandingan" class="form-control"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Lottery Schedule</label>
-                                                <input type="time" name="jadwal_undi" class="form-control"
-                                                    id="exampleInputEmail1" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Official Site</label>
-                                                <input type="text" name="situs_resmi" class="form-control"
+                                                <label for="exampleInputEmail1" class="form-label">Score</label>
+                                                <input type="text" name="skor" class="form-control"
                                                     id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
 
@@ -99,11 +115,10 @@
                                     <thead>
                                         <tr class="text-gray-500 text-start fw-bold fs-6 gs-0">
                                             <th style="width:5%;text-align: center; text-transform:capitalize">No.</th>
-                                            <th style="width:15%;text-align: center;text-transform:capitalize">Name Lottery
-                                            </th>
-                                            <th style="text-align: center;text-transform:capitalize">Closing Schedule</th>
-                                            <th style="text-align: center;text-transform:capitalize">Lottery Schedule</th>
-                                            <th style="text-align: center;text-transform:capitalize">Official Site</th>
+                                            <th style="width:15%;text-align: center;text-transform:capitalize">League</th>
+                                            <th style="text-align: center;text-transform:capitalize">Date and time</th>
+                                            <th style="text-align: center;text-transform:capitalize">Match</th>
+                                            <th style="text-align: center;text-transform:capitalize">Score</th>
                                             <th style="width:10%;text-align:center;text-transform:capitalize">Action</th>
                                         </tr>
                                     </thead>
@@ -123,7 +138,7 @@
                 <!--begin::Copyright-->
                 <div class="order-2 text-gray-900 order-md-1">
                     <span class="text-muted fw-semibold me-1">2024&copy;</span>
-                    <a href="/" target="_blank" class="text-gray-800 text-hover-primary">JederWD</a>
+                    <a href="/" target="_blank" class="text-gray-800 text-hover-primary">LAGACUAN</a>
                 </div>
                 <!--end::Copyright-->
                 <!--begin::Menu-->
@@ -147,61 +162,7 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="editModalLabel" style="text-transform: capitalize">Edit Schedule</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Form Edit Data -->
-                    <form id="editForm">
-                        <!-- Add hidden input for ID -->
-                        <input type="hidden" id="editId" name="id">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Choose Lottery :</label>
-                            <select name="pasaran_id" id="pasaran_selectEdit" class="form-control">
-                                <option selected disabled>Select your lottery</option>
-                                @foreach ($pasarans as $pasaranId => $pasaranName)
-                                    <option style="text-transform: uppercase" value="{{ $pasaranId }}">
-                                        {{ $pasaranName }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <!-- Form fields (name, color, number) go here -->
-                        <div class="mb-3">
-                            <div style="text-align: left">
-                                <label for="exampleInputEmail1" class="form-label"
-                                    style="text-transform: capitalize;">Closing Schedule</label>
-                            </div>
-                            <input type="time" class="form-control" name="jadwal_tutup" id="jadwal_tutup">
-                        </div>
-                        <div class="mb-3">
-                            <div style="text-align: left">
-                                <label for="exampleInputEmail1" class="form-label"
-                                    style="text-transform: capitalize;">Lottery Schedule</label>
-                            </div>
-                            <input type="time" class="form-control" name="jadwal_undi" id="jadwal_undi">
-                        </div>
 
-                        <div class="mb-3">
-                            <div style="text-align: left">
-                                <label for="exampleInputEmail1" class="form-label"
-                                    style="text-transform: capitalize;">Official Site</label>
-                            </div>
-                            <input type="text" class="form-control" name="situs_resmi" id="situs_resmi">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="updateData()">Save Changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <script type="text/javascript">
@@ -216,7 +177,7 @@
         let table = $('#table-pasaran').DataTable({
             processing: true,
             serverSide: true,
-            ajax: '/index-jadwal',
+            ajax: '/index-bola',
             columns: [{
                     className: "text-center",
                     data: "DT_RowIndex",
@@ -225,22 +186,24 @@
                     searchable: false
                 },
                 {
-                    data: 'pasaran_name',
-                    name: 'table_pasaran.name_pasaran' // Sesuaikan dengan nama kolom yang benar
+                    className: "text-center",
+                    data: 'liga',
+                    name: 'liga'
                 },
                 {
                     className: "text-center",
-                    data: 'jadwal_tutup',
-                    name: 'jadwal_tutup'
+                    data: 'tanggal_waktu',
+                    name: 'tanggal_waktu'
                 },
                 {
                     className: "text-center",
-                    data: 'jadwal_undi',
-                    name: 'jadwal_undi'
+                    data: 'pertandingan',
+                    name: 'pertandingan'
                 },
                 {
-                    data: 'situs_resmi',
-                    name: 'situs_resmi'
+                    className: "text-center",
+                    data: 'skor',
+                    name: 'skor'
                 },
                 {
                     className: "text-center",
@@ -263,7 +226,7 @@
                 var formData = new FormData($(this)[0]);
 
                 $.ajax({
-                    url: '/store-jadwal',
+                    url: '/store-bola',
                     type: 'POST',
                     data: formData,
                     contentType: false,
@@ -298,59 +261,6 @@
             });
         });
 
-        // Get data berdasarkan id
-        function loadData(id) {
-            $.ajax({
-                url: '/get-data-jadwal/' + id,
-                type: 'GET',
-                success: function(response) {
-                    // Mengisi formulir dengan data yang diterima
-                    $('#editId').val(response.id);
-                    $('#jadwal_tutup').val(response.jadwal_tutup);
-                    $('#jadwal_undi').val(response.jadwal_undi);
-                    $('#situs_resmi').val(response.situs_resmi);
-                    $("#pasaran_selectEdit").val(response.pasaran_id);
-                },
-                error: function(error) {
-                    console.log(error);
-                }
-            });
-        }
-
-        // Update data
-        function updateData() {
-            $.ajax({
-                url: '/update-jadwal',
-                type: 'POST',
-                data: $('#editForm').serialize(),
-                success: function(response) {
-                    // Jika success
-                    Swal.fire({
-                        title: '<span class="your-custom-css-class" style="color:#b5b7c8">Success!</span>',
-                        text: "Your file has been successfully edited",
-                        icon: "success",
-                        timer: 700,
-                        showConfirmButton: false,
-                    });
-                    table.draw();
-
-                    $('#editModal').modal('hide');
-                    $('.modal-backdrop.show').css('display', 'none');
-
-                },
-                error: function(error) {
-                    console.log(error);
-                    $('#exampleModal').modal('hide');
-                    $('#storeData')[0].reset();
-                    $('.modal-backdrop.show').css('display', 'none');
-                    Swal.fire({
-                        title: '<span class="your-custom-css-class" style="color:#b5b7c8">Failed!</span>',
-                        text: "Error: " + error.message,
-                        icon: "error",
-                    });
-                }
-            });
-        }
 
         // Destroy data
         function deleteData(id) {
@@ -366,7 +276,7 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: "POST",
-                        url: "/destroy-jadwal",
+                        url: "/destroy-bola",
                         data: {
                             id: id,
                         },

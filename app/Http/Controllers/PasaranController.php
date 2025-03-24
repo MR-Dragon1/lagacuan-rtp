@@ -52,6 +52,10 @@ class PasaranController extends Controller
     {
         return view('jadwal');
     }
+    public function index_bola_home()
+    {
+        return view('bola');
+    }
     public function index_result_home()
     {
         return view('result');

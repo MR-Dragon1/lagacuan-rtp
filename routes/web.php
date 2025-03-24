@@ -23,6 +23,7 @@ Route::get('/home', [PasaranController::class, 'index_pasaran_home'])->name('ind
 Route::get('/live-draw', [PasaranController::class, 'index_live_home'])->name('index-live-home');
 Route::get('/prediksi-togel', [PasaranController::class, 'index_prediksi_home'])->name('index-prediksi-home');
 Route::get('/jadwal-togel', [PasaranController::class, 'index_jadwal_home'])->name('index-jadwal-home');
+Route::get('/prediksi-bola', [PasaranController::class, 'index_bola_home'])->name('index-bola-home');
 Route::get('/data-result', [PasaranController::class, 'index_result_home'])->name('index-result-home');
 Route::get('/bukti-jackpot', [PasaranController::class, 'index_bukti_home'])->name('index-bukti-home');
 Route::get('/buku-mimpi', [PasaranController::class, 'index_buku_home'])->name('index-buku-home');

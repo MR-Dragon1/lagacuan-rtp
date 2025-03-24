@@ -100,7 +100,8 @@
                         <!--begin::Card body-->
                         <div class="card-body pt-2">
                             <!--begin::Table-->
-                            <div class="table-responsive">
+                            <div class="table-responsive"
+                                style="background-color: #000000ba;padding: 10px;border-radius: 7px;color: white; !important">
                                 <table style="width: 100%; font-size:14px"
                                     class="table align-middle table-row-dashed fs-6 gy-3" id="table-pasaran">
                                     <thead>

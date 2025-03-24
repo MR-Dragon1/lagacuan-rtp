@@ -39,6 +39,18 @@
                 BUKTI JACKPOT 🔥
             </span>
         </a>
+        <a @if (request()->is('jadwal-bola')) class="actives" @endif class="nav-item nav-link no-actived"
+            href="/laganews.com" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
+            <span class="head-2">
+                JADWAL BOLA
+            </span>
+        </a>
+        <a @if (request()->is('prediksi-bola')) class="actives" @endif class="nav-item nav-link no-actived"
+            href="/prediksi-bola" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
+            <span class="head-2">
+                PREDIKSI BOLA
+            </span>
+        </a>
         <a @if (request()->is('buku-mimpi')) class="actives" @endif class="nav-item nav-link no-actived"
             href="/buku-mimpi" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
             <span class="head-2">
@@ -112,6 +124,19 @@
                 <a href="/bukti-jackpot"><button @if (request()->is('bukti-jackpot')) class="actives-mobile" @endif
                         class="button-15" role="button">
                         BUKTI JACKPOT</button></a>
+            </div>
+        </div>
+        <div class="mb-1 row align-items-center">
+            <div class="col" style="padding: 0px; margin-right:2px">
+                <a href="https://laganews.com" target="_blank"><button
+                        @if (request()->is('')) class="actives-mobile" @endif class="button-15"
+                        role="button">
+                        JADWAL BOLA</button></a>
+            </div>
+            <div class="col" style="padding: 0px;margin-left:2px">
+                <a href="/prediksi-bola"><button @if (request()->is('prediksi-bola')) class="actives-mobile" @endif
+                        class="button-15" role="button">
+                        PREDIKSI BOLA</button></a>
             </div>
         </div>
         <div class="mb-1 row align-items-center">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
+use App\Models\Bola;
 use App\Models\Buku;
 use App\Models\Jadwal;
 use App\Models\Pasaran;
@@ -120,27 +121,21 @@ class PasaranController extends Controller
     public function jadwalJson()
     {
 
-        // $data = Pasaran::join('table_jadwal', 'table_jadwal.pasaran_id', '=', 'table_pasaran.id')
-        // ->select('table_jadwal.id', 'name_pasaran', 'table_jadwal.jadwal_tutup', 'table_jadwal.jadwal_undi', 'table_jadwal.situs_resmi')
-        // ->orderBy('table_jadwal.id', 'desc')
-        // ->get();
-
-
-        // $dataJson = $data->map(function ($item) {
-        //     return [
-        //         'id' => ($item->id),
-        //         'name_pasaran' => ($item->name_pasaran),
-        //         'jadwal_tutup' => ($item->jadwal_tutup),
-        //         'jadwal_undi' => ($item->jadwal_undi),
-        //         'situs_resmi' => ($item->situs_resmi),
-        //     ];
-        // });
 
         $data = Jadwal::with("pasaran")->orderBy("jadwal_undi", "asc")->get();
         $dataSelesai = $data->where("jadwal_undi", "<", Carbon::now()->format("H:i:s"));
         $databelum = $data->where("jadwal_undi", ">", Carbon::now()->format("H:i:s"));
 
         $data = $databelum->merge($dataSelesai);
+
+        return response()->json($data);
+    }
+
+    public function jadwalBola()
+    {
+
+
+        $data = Bola::get();
 
         return response()->json($data);
     }

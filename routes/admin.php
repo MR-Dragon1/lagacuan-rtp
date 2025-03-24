@@ -3,6 +3,7 @@ use App\Http\Controllers\RtpController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ShioController;
+use App\Http\Controllers\BolaController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BuktiController;
 use App\Http\Controllers\BukuController;
@@ -57,6 +58,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/destroy-jadwal', [JadwalController::class, 'destroy_jadwal']);
     Route::get('/get-data-jadwal/{id}', [JadwalController::class, 'getData']);
     Route::post('/update-jadwal', [JadwalController::class, 'updateData']);
+
+    // Football Prediction
+    Route::get('/index-bola', [BolaController::class, 'index_bola'])->name('index-bola');
+    Route::post('/store-bola', [BolaController::class, 'store_bola']);
+    Route::post('/destroy-bola', [BolaController::class, 'destroy_bola']);
+    Route::get('/get-data-bola/{id}', [BolaController::class, 'getData']);
+    Route::post('/update-bola', [BolaController::class, 'updateData']);
 
     // Dream Book
     Route::get('/index-buku', [BukuController::class, 'index_buku'])->name('index-buku');
