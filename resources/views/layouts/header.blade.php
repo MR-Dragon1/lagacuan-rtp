@@ -39,10 +39,10 @@
                 BUKTI JACKPOT 🔥
             </span>
         </a>
-        <a @if (request()->is('jadwal-bola')) class="actives" @endif class="nav-item nav-link no-actived"
-            href="/laganews.com" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
+        <a @if (request()->is('live-score')) class="actives" @endif class="nav-item nav-link no-actived"
+            href="/lagascore.com" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
             <span class="head-2">
-                JADWAL BOLA
+                LIVE SCORE
             </span>
         </a>
         <a @if (request()->is('prediksi-bola')) class="actives" @endif class="nav-item nav-link no-actived"
@@ -128,10 +128,10 @@
         </div>
         <div class="mb-1 row align-items-center">
             <div class="col" style="padding: 0px; margin-right:2px">
-                <a href="https://laganews.com" target="_blank"><button
+                <a href="https://lagascore.com" target="_blank"><button
                         @if (request()->is('')) class="actives-mobile" @endif class="button-15"
                         role="button">
-                        JADWAL BOLA</button></a>
+                        LIVE SCORE</button></a>
             </div>
             <div class="col" style="padding: 0px;margin-left:2px">
                 <a href="/prediksi-bola"><button @if (request()->is('prediksi-bola')) class="actives-mobile" @endif
