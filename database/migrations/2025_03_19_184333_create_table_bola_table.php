@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('table_bola', function (Blueprint $table) {
             $table->id();
-            $table->string('liga');
+            $table->string('liga')->nullable();
+            $table->dateTime('tanggal_waktu');
             $table->string('pertandingan');
             $table->string('skor');
             $table->timestamps();
