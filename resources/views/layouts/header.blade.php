@@ -40,7 +40,7 @@
             </span>
         </a>
         <a @if (request()->is('live-score')) class="actives" @endif class="nav-item nav-link no-actived"
-            href="/lagascore.com" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
+            href="https://lagascore.com" style="font-family:system-ui; letter-spacing: 2px; font-size: 13px;">
             <span class="head-2">
                 LIVE SCORE
             </span>
