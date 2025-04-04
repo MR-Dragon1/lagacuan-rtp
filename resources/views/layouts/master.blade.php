@@ -11,6 +11,7 @@
     <meta name="generator" content="Hugo 0.122.0">
     <meta name="domain" content="{{ env('DOMAIN_UTAMA_ACTIVE') }}">
     <title>LAGACUAN - Link Prediksi & RTP SLOT Resmi LAGACUAN, Official Login LAGACUAN</title>
+    <meta name="google-site-verification" content="i2vaNq9fr4Vo1dQUqtygvp7lJx5Tyj47wMvVA_K9UiI" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
     <link href="{{ asset('assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
